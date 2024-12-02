@@ -1,0 +1,6 @@
+.Header {
+	background-color: rgba(84, 55, 34, 0.712);
+height: 80px;
+display: flex;
+flex-direction: column
+}
