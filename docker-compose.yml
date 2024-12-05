@@ -1,0 +1,40 @@
+services:
+
+  backend-service:
+
+
+    image: shlomtzion2608/image-generator-backend-image:1.0
+
+    build: ./Backend
+
+    container_name: "image-generator-backend-container" 
+    
+    ports:
+      - 4000:4000
+
+    env_file:
+      - /backend/.env
+ 
+
+    restart: unless-stopped
+
+  
+  frontend-service:
+    
+    depends_on:
+      - backend-service
+
+    image: shlomtzion2608/image-generator-frontend-image:1.0
+
+    build: ./Frontend
+
+    container_name: image-generator-frontend-container
+
+    ports:
+      - 80:3000
+
+    restart: unless-stopped
+
+
+      
+    
