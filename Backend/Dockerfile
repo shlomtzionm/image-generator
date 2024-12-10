@@ -8,6 +8,8 @@ RUN npm i
 
 COPY . /app
 
+EXPOSE 4000
+
 ENTRYPOINT npm start
 
 

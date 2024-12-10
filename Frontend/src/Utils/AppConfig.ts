@@ -1,7 +1,7 @@
 class AppConfig {
 
     // Backend urls:
-    public readonly backendUrl = "http://localhost:4000/api";
+    public readonly backendUrl = "http://13.60.234.35:4000/api";
  
     //Axios options:
     public readonly axiosOptions = {

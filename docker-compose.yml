@@ -3,7 +3,7 @@ services:
   backend-service:
 
 
-    image: shlomtzion2608/image-generator-backend-image:1.0
+    image: shlomtzion2608/image-generator-backend-image:1.4
 
     build: ./Backend
 
@@ -12,11 +12,11 @@ services:
     ports:
       - 4000:4000
 
-    env_file:
-      - /backend/.env
- 
-
     restart: unless-stopped
+
+    environment:
+      DALLE3URL : "https://api.openai.com/v1/images/generations"
+      PORT: 4000 
 
   
   frontend-service:
@@ -24,7 +24,7 @@ services:
     depends_on:
       - backend-service
 
-    image: shlomtzion2608/image-generator-frontend-image:1.0
+    image: shlomtzion2608/image-generator-frontend-image:1.2
 
     build: ./Frontend
 

@@ -32,7 +32,7 @@ export function Generator(): JSX.Element {
         Send
       </LoadingButton>
 
-      {imageSource !== "" && <img src={imageSource} />}
+      {imageSource !== "" && <img src={imageSource}  alt="generated image"/>}
     </div>
   );
 }
