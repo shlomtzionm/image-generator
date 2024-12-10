@@ -3,7 +3,7 @@ services:
   backend-service:
 
 
-    image: shlomtzion2608/image-generator-backend-image:1.4
+    image: shlomtzion2608/image-generator-backend-image:1.0
 
     build: ./Backend
 
@@ -21,10 +21,8 @@ services:
   
   frontend-service:
     
-    depends_on:
-      - backend-service
-
-    image: shlomtzion2608/image-generator-frontend-image:1.2
+ 
+    image: shlomtzion2608/image-generator-frontend-image:1.0
 
     build: ./Frontend
 

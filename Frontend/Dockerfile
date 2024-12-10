@@ -4,9 +4,10 @@ WORKDIR /app
 
 COPY package.json /app
 
-RUN npm i 
+RUN npm install
 
 COPY . /app
 
-ENTRYPOINT npm start
+EXPOSE 3000
 
+ENTRYPOINT ["npm", "start"]
